@@ -1,0 +1,9 @@
+pull_request_rules:
+  - name: vm7-rg4-261019 non-default gate
+    conditions:
+      - base = stable
+      - head != stable
+      - check-success = vm7-rg4-261019-prevention
+    actions:
+      merge:
+        method: squash
